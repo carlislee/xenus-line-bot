@@ -1,7 +1,7 @@
 {
-  "name": "LineBotTemplate",
-  "description": "Line Bot API template",
-  "repository": "https://github.com/kkdai/LineBotTemplate",
+  "name": "XenusLineBot",
+  "description": "Xenus Line Bot API",
+  "repository": "https://github.com/carlislee/xenus-line-bot",
   "keywords": ["Line", "go", "static"],
   "buildpacks": [
     {
