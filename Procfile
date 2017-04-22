@@ -1,2 +1,2 @@
-web: XenusLineBot
+web: xenus-line-bot
 

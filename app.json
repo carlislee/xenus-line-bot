@@ -1,5 +1,5 @@
 {
-  "name": "XenusLineBot",
+  "name": "xenus-line-bot",
   "description": "Xenus Line Bot API",
   "repository": "https://github.com/carlislee/xenus-line-bot",
   "keywords": ["Line", "go", "static"],
