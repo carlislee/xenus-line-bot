@@ -35,6 +35,10 @@ func main() {
     if err != nil {
        log.Fatal(err)
     }
+    stmt, err := db.Prepare("INSERT INTO userinfo(username,departname,created) VALUES($1,$2,$3) RETURNING uid")
+    checkErr(err)
+    res, err := stmt.Exec("astaxie", "研发部门", "2012-12-09")
+    checkErr(err)
 
 	http.ListenAndServe(addr, nil)
 }
