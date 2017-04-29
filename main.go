@@ -17,8 +17,9 @@ import (
 	"log"
 	"net/http"
 	"os"
-
 	"github.com/line/line-bot-sdk-go/linebot"
+	"github.com/lib/pq"
+    "database/sql"
 )
 
 var bot *linebot.Client
@@ -29,7 +30,12 @@ func main() {
 	log.Println("Bot:", bot, " err:", err)
 	http.HandleFunc("/callback", callbackHandler)
 	port := os.Getenv("PORT")
-	addr := fmt.Sprintf(":%s", port)
+	
+	db, err := sql.Open("postgres", os.Getenv("postgres://pcrwigtpudislj:c90f666fbfd8b02d3605bac48b343f623e6740cb17392ea6b06edc2d88ff9427@ec2-50-19-95-47.compute-1.amazonaws.com:5432/dbd78nn0n8bbnb"))
+    if err != nil {
+       log.Fatal(err)
+    }
+
 	http.ListenAndServe(addr, nil)
 }
 
